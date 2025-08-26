@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Shivam Amrutkar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html" class="nav-logo">Shivam Amrutkar</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="work.html" class="nav-link">Work</a></li>
+                <li class="nav-item"><a href="projects.html" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link active">Contact</a></li>
+            </ul>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="theme-toggle">
+                    <input type="checkbox" id="theme-toggle" />
+                    <div class="slider round"><i class="fas fa-sun"></i><i class="fas fa-moon"></i></div>
+                </label>
+            </div>
+            <div class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
+        </nav>
+    </header>
+
+    <main class="page-fade-in">
+        <section class="content-section">
+            <h2 class="page-title">Get In Touch</h2>
+            <p class="contact-subtitle">
+                I'm actively seeking roles in AI Engineering and Data Automation. If you have an opportunity or just
+                want to connect, feel free to reach out.
+            </p>
+            <div class="contact-container animate-on-scroll">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p><i class="fas fa-envelope"></i> <a
+                            href="mailto:shivamamrutkar1@gmail.com">shivamamrutkar1@gmail.com</a></p>
+                    <p><i class="fas fa-phone"></i> +91-7447819903</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Pune, India</p>
+                    <div class="social-links-contact">
+                        <a href="https://linkedin.com/in/shivamamrutkar" target="_blank" aria-label="LinkedIn"><i
+                                class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/yesshivam007" target="_blank" aria-label="GitHub"><i
+                                class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form" action="#" method="POST">
+                    <h3>Send a Message</h3>
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" class="cta-button">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Shivam Amrutkar</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
