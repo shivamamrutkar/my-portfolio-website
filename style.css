@@ -547,6 +547,17 @@ input:checked+.slider:before {
     margin: 1rem 0;
 }
 
+.project-links {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.project-link i {
+    margin-left: 0.4rem;
+}
+
+
 .project-link {
     color: var(--primary-color-start);
     text-decoration: none;
