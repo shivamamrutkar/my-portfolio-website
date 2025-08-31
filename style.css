@@ -529,7 +529,8 @@ input:checked+.slider:before {
 }
 
 .project-image {
-    height: 300px;
+    aspect-ratio: 16 / 9;
+    /* This forces a widescreen ratio */
     background-size: cover;
     background-position: center;
 }
@@ -800,3 +801,11 @@ input:checked+.slider:before {
     margin-right: 0.25rem;
     /* Adjusted for better spacing */
     transition: color 0.3s;}
+
+.project-image {
+    aspect-ratio: 16 / 9;
+    /* This forces a widescreen ratio */
+    background-size: cover;
+    background-position: center;}
+
+    
