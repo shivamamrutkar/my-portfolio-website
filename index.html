@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shivam Amrutkar | Data & AI Automation</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="shortcut icon" href="./logo.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -16,12 +16,12 @@
 <body>
     <header class="header">
         <nav class="navbar">
-            <a href="" class="nav-logo">Shivam</a>
+            <a href="#home" class="nav-logo">Shivam</a>
             <ul class="nav-menu">
-                <li class="nav-item"><a href="" class="nav-link active">Home</a></li>
-                <li class="nav-item"><a href="../work" class="nav-link">Work</a></li>
-                <li class="nav-item"><a href="../projects" class="nav-link">Projects</a></li>
-                <li class="nav-item"><a href="../contact" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="#work" class="nav-link">Work</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <div class="theme-switch-wrapper">
                 <label class="theme-switch" for="theme-toggle">
@@ -32,8 +32,9 @@
             <div class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
         </nav>
     </header>
+
     <main>
-        <section class="hero">
+        <section class="hero" id="home">
             <div id="particles-js"></div>
             <div class="hero-content-wrapper">
                 <div class="hero-text-column">
@@ -42,7 +43,8 @@
                         Transforming complex data into intelligent, automated workflows.
                     </p>
                     <div class="hero-buttons animate-text" style="animation-delay: 0.4s;">
-                        <a href="Shivam_Amrutkar_Data_Analyst_Resume.pdf" class="cta-button">Download Resume</a>
+                        <a href="Shivam_Amrutkar_Data_Analyst_Resume.pdf" class="cta-button" download>Download
+                            Resume</a>
                         <div class="social-links">
                             <a href="https://linkedin.com/in/shivamamrutkar" target="_blank" aria-label="LinkedIn"><i
                                     class="fab fa-linkedin"></i></a>
@@ -57,21 +59,206 @@
             </div>
         </section>
 
-        <section class="content-section animate-on-scroll">
+        <section class="content-section highlight-section animate-on-scroll">
+            <h2>Key Achievements</h2>
+            <div class="highlight-grid">
+                <div class="highlight-item">
+                    <i class="fas fa-rocket"></i>
+                    <h3>Business Impact</h3>
+                    <p>Saved 50+ hours/month and boosted team productivity by 90% by developing 5+ automated Python &
+                        SQL workflows.</p>
+                </div>
+                <div class="highlight-item">
+                    <i class="fas fa-robot"></i>
+                    <h3>AI Development</h3>
+                    <p>Engineered a custom RAG AI agent using LangChain and Gemini for intelligent, high-speed document
+                        analysis and querying.</p>
+                </div>
+                <div class="highlight-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Product Initiative</h3>
+                    <p>Conceptualized and designed a full-stack P2P escrow platform prototype (SecureSwap) to solve
+                        trust issues in online commerce.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section animate-on-scroll" id="about">
             <h2>About Me</h2>
             <p class="about-text">
                 As a data professional with a strong foundation in analytics, I am passionate about bridging the gap
                 between data and intelligent action. My experience in automating workflows with Python and SQL has saved
                 over 50 hours per month and boosted productivity by 90%. Now, I am focused on leveraging this expertise
-                to pivot into <b>AI Engineering </b>, with a focus on building custom <b>AI agents</b> and automating entire
-                business processes using LLMs (like OpenAI and HuggingFace) and frameworks like LangChain. I thrive on
-                creating efficient, data-driven systems that not only provide insights but also act on them.
+                to pivot into <strong>AI Engineering</strong>, with a focus on building custom <strong>AI
+                    agents</strong> and automating entire business processes using LLMs (like OpenAI and HuggingFace)
+                and frameworks like LangChain. I thrive on creating efficient, data-driven systems that not only provide
+                insights but also act on them.
             </p>
         </section>
+
+        <section class="content-section highlight-section animate-on-scroll">
+            <h2>My Approach</h2>
+            <div class="highlight-grid">
+                <div class="highlight-item">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Data-Driven Decisions</h3>
+                    <p>I believe in moving beyond intuition. Every solution I build is backed by rigorous analysis,
+                        ensuring strategies are effective and outcomes are measurable.</p>
+                </div>
+                <div class="highlight-item">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Elegant Automation</h3>
+                    <p>My passion is to build systems that are efficient and scalable. I aim to automate the mundane to
+                        free up human potential for creative problem-solving.</p>
+                </div>
+                <div class="highlight-item">
+                    <i class="fas fa-brain"></i>
+                    <h3>User-Centric AI</h3>
+                    <p>I focus on creating AI solutions that are intuitive and genuinely solve a human need. Technology
+                        is most powerful when it's accessible and purposeful.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section animate-on-scroll" id="work">
+            <h2>Professional Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Sep 2024 - Present</div>
+                    <div class="timeline-content">
+                        <h3>Data Analyst</h3>
+                        <p class="company">Ventra Health - Hyderabad (Hybrid)</p>
+                        <ul>
+                            <li>Automated 5+ critical workflows using Python and SQL, saving 50+ hours monthly and
+                                boosting team productivity by 90%.</li>
+                            <li>Engineered and managed robust ETL pipelines, delivering over 150 recurring reports for
+                                15+ major US healthcare providers.</li>
+                            <li>Collaborated with cross-functional teams to ensure 100% on-time delivery of data-driven
+                                insights under strict SLAs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h2 style="margin-top: 4rem;">Education</h2>
+            <div class="education-card">
+                <h3>Bachelor of Engineering in Robotics & Automation</h3>
+                <p class="education-meta">D.Y. Patil College of Engineering, Pune | 2021-2025</p>
+                <p class="education-details"><strong>CGPA:</strong> 8.13</p>
+                <div class="honors-badge">
+                    <i class="fas fa-star"></i> Honors in Data Science (Grade: A)
+                </div>
+            </div>
+
+            <h2 style="margin-top: 4rem;">Certifications</h2>
+            <div class="certifications-grid">
+                <div class="cert-card">
+                    <a href="YOUR_GOOGLE_CERTIFICATE_LINK" target="_blank" rel="noopener noreferrer">
+                        Google Data Analytics (Google)
+                    </a>
+                </div>
+                <div class="cert-card">
+                    <a href="YOUR_CFI_CERTIFICATE_LINK" target="_blank" rel="noopener noreferrer">
+                        BI Foundations (CFI)
+                    </a>
+                </div>
+                <div class="cert-card">
+                    <a href="YOUR_UDEMY_CERTIFICATE_LINK" target="_blank" rel="noopener noreferrer">
+                        Python for ML (Udemy)
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section animate-on-scroll" id="projects">
+            <h2>Projects</h2>
+            <div class="projects-gallery">
+                <div class="project-card-large animate-on-scroll">
+                    <div class="project-image" style="background-image: url('secureswap.png');"></div>
+                    <div class="project-content">
+                        <h3>SecureSwap: Rebuilding Trust in P2P Commerce</h3>
+                        <p>In P2P commerce, fear of scams prevents countless transactions. <strong>I designed SecureSwap
+                                to solve this by creating a 'digital handshake'</strong>: a platform holding funds in
+                            escrow until both parties are satisfied. The result is a prototype that fosters a safe,
+                            reliable environment for P2P exchange.</p>
+                        <p class="project-tech"><strong>Skills:</strong> Web Development, Market Research, Payment
+                            Gateway Integration</p>
+                        <div class="project-details">
+                            <h4>Challenges & Learnings</h4>
+                            <p>The primary challenge was designing a frictionless yet secure user verification flow. I
+                                learned the importance of balancing robust security measures with a simple user
+                                experience to build trust from the first interaction.</p>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://secureswap.in" class="project-link" target="_blank">View Demo <i
+                                    class="fas fa-external-link-alt"></i></a>
+                            <a href="https://github.com/shivamamrutkar/secureswap" class="project-link"
+                                target="_blank">View on GitHub <i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card-large animate-on-scroll">
+                    <div class="project-image" style="background-image: url('ragapp.png');"></div>
+                    <div class="project-content">
+                        <h3>RAG Chat: Gemini + LangChain + FAISS</h3>
+                        <p>Researchers often waste hours searching for specific information in dense documents.
+                            <strong>I solved this by building a RAG application</strong> that uses LangChain and Gemini
+                            to provide precise, context-aware answers to user queries, dramatically reducing research
+                            time.</p>
+                        <p class="project-tech"><strong>Skills:</strong> Python, LangChain, RAGs</p>
+                        <div class="project-details">
+                            <h4>Challenges & Learnings</h4>
+                            <p>Optimizing the chunking strategy for PDF ingestion was a key challenge. This project
+                                taught me how different text splitting methods directly impact the relevance and
+                                accuracy of the retrieved context, a crucial aspect of effective RAG pipelines.</p>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://simple-rag.streamlit.app/" class="project-link" target="_blank">View Demo
+                                <i class="fas fa-external-link-alt"></i></a>
+                            <a href="https://github.com/shivamamrutkar/rag-application" class="project-link"
+                                target="_blank">View on GitHub <i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section animate-on-scroll" id="contact">
+            <h2>Get In Touch</h2>
+            <p class="contact-subtitle">
+                I'm actively seeking roles in AI Engineering and Data Automation. If you have an opportunity or just
+                want to connect, feel free to reach out.
+            </p>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p><i class="fas fa-envelope"></i> <a
+                            href="mailto:shivamamrutkar1@gmail.com">shivamamrutkar1@gmail.com</a></p>
+                    <p><i class="fas fa-phone"></i> +91-7447819903</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Pune, India</p>
+                    <div class="social-links-contact">
+                        <a href="https://linkedin.com/in/shivamamrutkar" target="_blank" aria-label="LinkedIn"><i
+                                class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/yesshivam007" target="_blank" aria-label="GitHub"><i
+                                class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form" action="#" method="POST">
+                    <h3>Send a Message</h3>
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" class="cta-button">Send Message</button>
+                </form>
+            </div>
+        </section>
     </main>
+
     <footer class="footer">
         <p>&copy; 2025 Shivam Amrutkar</p>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="script.js"></script>
 </body>

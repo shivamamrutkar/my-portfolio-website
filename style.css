@@ -619,7 +619,8 @@ input:checked+.slider:before {
 .social-links-contact a {
     color: var(--text-color);
     font-size: 1.8rem;
-    margin-right: 1.5rem;
+    margin-right: 1rem;
+    /* Adjusted for better spacing */
     transition: color 0.3s;
 }
 
@@ -744,3 +745,58 @@ input:checked+.slider:before {
         flex-direction: column;
     }
 }
+
+/* Add this to style.css */
+
+/* --- HIGHLIGHT (ACHIEVEMENTS & PHILOSOPHY) SECTIONS --- */
+.highlight-section {
+    background-color: var(--card-background-color);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    text-align: center;
+}
+
+.highlight-item {
+    padding: 1rem;
+}
+
+.highlight-item i {
+    font-size: 2.5rem;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+}
+
+.highlight-item h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    color: var(--heading-color);
+}
+
+/* --- PROJECT DETAILS (CHALLENGES & LEARNINGS) --- */
+.project-details {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background-color: var(--background-color);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.project-details h4 {
+    color: var(--primary-color-start);
+    margin-bottom: 0.5rem;
+}
+
+.social-links-contact a {
+    color: var(--text-color);
+    font-size: 1.8rem;
+    margin-right: 0.25rem;
+    /* Adjusted for better spacing */
+    transition: color 0.3s;}

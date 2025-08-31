@@ -1,7 +1,35 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- MOBILE NAVIGATION, THEME TOGGLE, SCROLL ANIMATIONS, FORM ---
-    // ... (All previous JS code remains here, unchanged) ...
+    // --- SCROLLSPY FOR ACTIVE NAV LINK ---
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-menu a');
+
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.5 // Triggers when 50% of the section is visible
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const id = entry.target.getAttribute('id');
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#' + id) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+    }, observerOptions);
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+
+
+    // --- MOBILE NAVIGATION ---
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
 
@@ -15,6 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
         navMenu.classList.remove('active');
     }));
 
+    // --- THEME TOGGLE ---
     const themeToggle = document.getElementById('theme-toggle');
     const currentTheme = localStorage.getItem('theme');
 
@@ -25,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    themeToggle.addEventListener('change', function() {
+    themeToggle.addEventListener('change', function () {
         if (this.checked) {
             document.documentElement.setAttribute('data-theme', 'dark');
             localStorage.setItem('theme', 'dark');
@@ -35,12 +64,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // --- SCROLL-BASED FADE-IN ANIMATIONS ---
     const scrollElements = document.querySelectorAll('.animate-on-scroll');
-    const observer = new IntersectionObserver((entries) => {
+    const scrollObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('is-visible');
-                observer.unobserve(entry.target);
+                scrollObserver.unobserve(entry.target);
             }
         });
     }, {
@@ -48,9 +78,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     scrollElements.forEach(el => {
-        observer.observe(el);
+        scrollObserver.observe(el);
     });
 
+    // --- CONTACT FORM ---
     const contactForm = document.querySelector('.contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
@@ -60,26 +91,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- ADD THIS PARTICLES.JS INITIALIZATION CODE ---
+    // --- PARTICLES.JS ---
     if (document.getElementById('particles-js')) {
         const particleColor = getComputedStyle(document.documentElement).getPropertyValue('--text-color').trim();
-        
-        particlesJS('particles-js', {
-            "particles": {
-                "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
-                "color": { "value": particleColor },
-                "shape": { "type": "circle" },
-                "opacity": { "value": 0.5, "random": true },
-                "size": { "value": 3, "random": true },
-                "line_linked": { "enable": true, "distance": 150, "color": particleColor, "opacity": 0.2, "width": 1 },
-                "move": { "enable": true, "speed": 1, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
-            },
-            "interactivity": {
-                "detect_on": "canvas",
-                "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": true, "mode": "push" }, "resize": true },
-                "modes": { "grab": { "distance": 140, "line_linked": { "opacity": 0.5 } }, "push": { "particles_nb": 4 } }
-            },
-            "retina_detect": true
-        });
+        particlesJS('particles-js', { "particles": { "number": { "value": 80, "density": { "enable": true, "value_area": 800 } }, "color": { "value": particleColor }, "shape": { "type": "circle" }, "opacity": { "value": 0.5, "random": true }, "size": { "value": 3, "random": true }, "line_linked": { "enable": true, "distance": 150, "color": particleColor, "opacity": 0.2, "width": 1 }, "move": { "enable": true, "speed": 1, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false } }, "interactivity": { "detect_on": "canvas", "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": true, "mode": "push" }, "resize": true }, "modes": { "grab": { "distance": 140, "line_linked": { "opacity": 0.5 } }, "push": { "particles_nb": 4 } } }, "retina_detect": true });
     }
 });
